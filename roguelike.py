@@ -8,8 +8,6 @@ player_name = "Samus" #input("Player Name: ") # Commented for debugging
 if player_name.lower() == "graham":
     player_name = "A stupid dork"
 
-from random import randint
-
 class Character(object):
     def __init__(self, name, posy, posx, health_max, health_current):
         self.name = name
@@ -71,15 +69,7 @@ def refscreen():
             except:
                 IndexError
                 screen[y][x] = "*"
-    """
-    for y in screen_size:
-        for x in screen_size:
-            try:
-                screen[y][x] = mapx[posy + y][posx + x]
-            except:
-                IndexError
-                screen[y][x] = "*"
-    """
+
     screen[(len(screen_size) // 2)][(len(screen_size) // 2)] = "@"
     """ Debuggng """
     #print(screen)
